@@ -32,6 +32,10 @@ public:
   rclcpp::node_interfaces::NodeBaseInterface::SharedPtr
   get_node_base_interface() const;
 
+  COMPOSITION_PUBLIC
+  rclcpp::tcl_node_interfaces::NodeTimingCoordinationInterface::SharedPtr
+  get_node_timing_coordination_interface() const;
+
 private:
   rclcpp::Node::SharedPtr node_;
   rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_;
